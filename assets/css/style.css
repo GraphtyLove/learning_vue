@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    background-color: #333333;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* * ----- GENERAL ----- *  */
+.df-center{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* * ----- HEADER ----- * */
+header{
+    margin: 50px;
+    font-size: 2rem;
+}
+
+/* * ----- MAIN ----- * */
+/* --- TASKS --- */
+.task-row{
+    display: flex;
+}
+
+/* --- TASK INPUT --- */
+.task-input-container{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+.task-input-txt{
+    margin: 0 10px;
+    width: 80%;
+}
+
+
+/* * ----- FOOTER ----- * */
+footer {
+    margin-top: 50px;
+    font-style: italic;
+    font-size: 0.75rem;
+}

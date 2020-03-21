@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Learn Vue</title>
+</head>
+
+<body>
+
+    <header class="df-center" id="header">
+        Hello {{ username }}
+    </header>
+
+    <main id="app">
+        <section class="task-container">
+            <h2>To Do:</h2>
+            <ol>
+                <li v-for=' (task, i) in activeTasks'>
+                    <input type="checkbox" v-on:click="() => checkTask(i)" />
+                    {{ task.text }}
+                </li>
+            </ol>
+            <h2>Done:</h2>
+            <ol>
+                <li v-for=' (task, i) in doneTasks'>
+                    <input type="checkbox" checked v-on:click="() => unCheckTask(i)" />
+                    {{ task.text }}
+                </li>
+            </ol>
+        </section>
+        <section class="task-inut df-center">
+            <h2>Add a task</h2>
+            <div class="task-input-container">
+                <input type="text" class="task-input-txt" id="task-txt-input" placeholder="Please type a task to add..."
+                    v-model="taskToAdd" />
+                <button v-on:click="addTask">Add task</button>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="df-center" id="footer">
+        <time>Page loaded: {{ timeDate }}</time>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
